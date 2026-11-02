@@ -5,6 +5,11 @@
 //! Horizon's modding API doesn't have yet — as an honest boundary report,
 //! never silently.
 
+// The classifier keeps a few tables and variants the current emit path does
+// not reach yet (the roadmap's native-code tier). They stay documented here
+// rather than deleted, so the boundary remains visible.
+#![allow(dead_code)]
+
 mod classify;
 mod emit;
 mod facts;

@@ -194,7 +194,7 @@ fn is_asset(name: &str) -> bool {
     name.starts_with("assets/")
 }
 
-fn classify_entry(name: &str, entry: &Entry) -> Option<BlockedBy> {
+fn classify_entry(name: &str, _entry: &Entry) -> Option<BlockedBy> {
     let parts: Vec<&str> = name.splitn(3, '/').collect();
     if parts.len() < 3 {
         // Horizon packs only assets/<ns>/... and data/<ns>/...; stray root

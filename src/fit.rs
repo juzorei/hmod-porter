@@ -184,7 +184,6 @@ pub fn run(out: &Path, mod_id: &str) -> Result<FitReport> {
 
     // ---- rules 2 and 3: model parents and textures ------------------------
     if models.is_dir() {
-        let mut have: BTreeSet<String> = BTreeSet::new();
         let mut all: BTreeSet<String> = BTreeSet::new();
         let mut stack = vec![models.clone()];
         while let Some(dir) = stack.pop() {
@@ -203,7 +202,7 @@ pub fn run(out: &Path, mod_id: &str) -> Result<FitReport> {
                 }
             }
         }
-        have = all.clone();
+        let have = all.clone();
 
         let prefix = format!("{mod_id}:block/");
         for name in &all {
