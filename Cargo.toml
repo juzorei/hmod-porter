@@ -1,0 +1,16 @@
+[package]
+name = "hmod-porter"
+version = "0.2.0"
+edition = "2024"
+description = "Turn a Java Minecraft mod jar into a Horizon content mod (.hmod)"
+license = "MIT"
+repository = "https://github.com/juzorei/hmod-porter"
+keywords = ["minecraft", "horizon", "mod", "porter", "rust"]
+categories = ["command-line-utilities", "games"]
+
+[dependencies]
+anyhow = "1.0.104"
+serde = { version = "1.0.229", features = ["derive"] }
+serde_json = "1.0.154"
+toml = "1.1.8"
+zip = "9.2.0"
